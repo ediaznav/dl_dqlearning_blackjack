@@ -1,4 +1,4 @@
-# Entrenando un agente a jugar BlackJack con Reinforcement Deepl Q-Learnign
+# Entrenando un agente a jugar BlackJack con Reinforcement Deep Q-Learnign
 
 Descripción del proyecto 
 
