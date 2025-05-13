@@ -1,5 +1,6 @@
 # Archivos Mac
 .DS_store
+__pycache__
 
 # Carpeta de datos
 runs
