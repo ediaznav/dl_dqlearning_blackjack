@@ -25,8 +25,9 @@ def get_args():
     parser.add_argument("--BATCH_SIZE", type=int)
     parser.add_argument("--MEMORY_SIZE", type=int)
     parser.add_argument("--TARGET_UPDATE_FREQ", type=int)
-    parser.add_argument("--RENDER", action="store_true")
     parser.add_argument("--DUELING", action="store_true")
+    parser.add_argument("--RENDER", action="store_true")
+    
 
     return parser.parse_args()
 
