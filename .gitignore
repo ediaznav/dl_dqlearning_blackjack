@@ -1,11 +1,11 @@
 # Archivos Mac
 .DS_store
-__pycache__
+*__pycache__*
 
 # Carpeta de datos
 runs
 logs
-# notebooks
+#notebooks
 
 # Archivos particulares
 *.csv
