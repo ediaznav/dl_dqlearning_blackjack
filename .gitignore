@@ -1,0 +1,19 @@
+# Archivos Mac
+.DS_store
+
+# Carpeta de datos
+<<<<<<< HEAD
+runs
+logs
+=======
+# data
+# logs
+# notebooks
+>>>>>>> 5ba948b (Codigo funcional - entrenamiento)
+
+# Archivos particulares
+*.csv
+*.logs
+*.log 
+*.txt 
+*.json
