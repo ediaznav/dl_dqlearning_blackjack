@@ -81,7 +81,7 @@ def train(config: HyperParams):
         memory_size=MEMORY_SIZE,
         batch_size=BATCH_SIZE,
         target_update_freq=TARGET_UPDATE_FREQ
-    )
+    ) 
 
     writer = SummaryWriter(log_dir=DIRECTORY_TENSORBOARD)
     reward_history = []

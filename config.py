@@ -13,8 +13,8 @@ class HyperParams:
     BATCH_SIZE: int = 64
     MEMORY_SIZE: int = 100_000
     TARGET_UPDATE_FREQ: int = 100
-    RENDER: bool = False
     DUELING: bool = False
+    RENDER: bool = False
 
     @staticmethod
     def from_yaml(path: str) -> "HyperParams":
