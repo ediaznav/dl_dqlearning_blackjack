@@ -40,7 +40,7 @@ class DuelingQNetwork(nn.Module):
             nn.Linear(128, 128),
             nn.ReLU(),
             nn.Linear(128, 1)
-        )
+        ) 
 
     def forward(self, x):
         shared_out = self.shared(x)
