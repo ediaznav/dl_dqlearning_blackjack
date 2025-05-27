@@ -2,7 +2,6 @@ import gymnasium as gym
 from gymnasium import spaces
 import numpy as np
 import random
-import pygame
 import sys
 
 # Blackjack helpers
@@ -121,45 +120,4 @@ class BlackjackMultiPlayerEnv(gym.Env):
         self.bankroll += self.current_bet * reward
         return self._get_obs(), reward, True, False, {}
 
-    def render(self):
-        if self.render_mode == "human":
-            self._render_pygame()
-
-    def _render_pygame(self):
-        if self.display is None:
-            pygame.init()
-            self.display = pygame.display.set_mode((self.width, self.height))
-            pygame.display.set_caption("Blackjack RL")
-            self.font = pygame.font.SysFont('Arial', 24)
-
-        self.display.fill(self.bg_color)
-
-        def draw_text(text, x, y, color=(255, 255, 255)):
-            label = self.font.render(text, True, color)
-            self.display.blit(label, (x, y))
-
-        # Dealer
-        draw_text(f"Dealer: {self.dealer} (Total: {hand_value(self.dealer)})", 20, 20)
-
-        # Player
-        draw_text(f"Player: {self.player} (Total: {hand_value(self.player)})", 20, 80)
-
-        # Info
-        draw_text(f"Bankroll: ${self.bankroll:.1f}", 20, 140)
-        draw_text(f"Bet: ${self.current_bet:.1f}", 20, 180)
-        if self.done:
-            draw_text("HAND OVER", 20, 220, color=(255, 0, 0))
-
-        pygame.display.flip()
-        pygame.time.delay(600)
-
-        # Handle window close
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                pygame.quit()
-                sys.exit()
-
-    def close(self):
-        if self.display is not None:
-            pygame.quit()
-            self.display = None
+   
