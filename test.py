@@ -16,7 +16,7 @@ from src.agents.dqn_agent import QNetwork
 #from blackjack_ui import BlackjackUI
 
 ### EVALUATION CONFIG ------------------------------------------------------
-MODEL_PATH = "models/q_network_a006637e49.pth"
+MODEL_PATH = "models/q_network_dueling_b845945d4b.pth" #"models/q_network_a006637e49.pth"
 RESUlTS_PATH = "./data/results/"
 N_EPISODES = 1000
 RENDER = False
@@ -111,16 +111,16 @@ for episode in range(N_EPISODES):
 ### RESUMEN ----------------------------------------------------------------
 
 pd.DataFrame(results, 
-             index = [list(results.keys())]).to_csv(RESUlTS_PATH + "results.csv",
+             index = [list(results.keys())]).to_csv(RESUlTS_PATH + "results_duel.csv",
                               index = False)
 
-pd.DataFrame(eventos).to_csv(RESUlTS_PATH + "eventos.csv",
+pd.DataFrame(eventos).to_csv(RESUlTS_PATH + "eventos_duel.csv",
                               index = False)
 
 pd.DataFrame({
     "dealer_hand":states_d, "player_hand":states_p,
       "action":actions
-}).to_csv(RESUlTS_PATH + "actions.csv", index = False)
+}).to_csv(RESUlTS_PATH + "actions_duel.csv", index = False)
 
 print("\n EVALUACIÓN FINAL")
 print(f"Episodios evaluados: {N_EPISODES}")
