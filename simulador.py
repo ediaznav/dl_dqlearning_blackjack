@@ -175,7 +175,7 @@ def run_simulation_live(n_simulations, model, velocidad):
             fig, ax = plt.subplots()
             ax.plot(win_rates, color="darkgreen", label="Tasa de victorias")
             ax.plot(surrender_rates, color="steelblue", label="Tasa de abandono")
-            ax.plot(loss_rates, color="salmon ", label="Tasa de derrota")
+            ax.plot(loss_rates, color="salmon", label="Tasa de derrota")
             ax.plot(draw_rates, color="gray", label="Tasa de empate")
             ax.set_xlim(0, n_simulations)
             ax.set_ylim(0, 1)
