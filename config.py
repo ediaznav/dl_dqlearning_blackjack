@@ -1,6 +1,14 @@
+# config.py
+
+# Scrip con hiperparametros para las redes neuronales. 
+#
+#
+
+# Importamos librerias necesarias 
 from dataclasses import dataclass
 import yaml
 
+# Definimos la clase y método
 @dataclass
 class HyperParams:
     N_EPISODES: int = 10_000_000
